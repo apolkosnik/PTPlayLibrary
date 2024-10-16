@@ -13,6 +13,7 @@
 #define	PTPLAY_MasterVolume		(TAG_USER + 0x02)	/* SG	ULONG		Default: 256 					*/
 #define	PTPLAY_PatternPosition	(TAG_USER + 0x04)	/* SG ULONG											*/
 #define	PTPLAY_Patterns			(TAG_USER + 0x05)	/* .G ULONG		Number of patterns			*/
+#define	PTPLAY_Positions			(TAG_USER + 0x06)	/* .G	ULONG *							*/
 #define	PTPLAY_SongLength			(TAG_USER + 0x07)	/* .G	ULONG 	Song length in patterns		*/
 #define	PTPLAY_SongLoopCount		(TAG_USER + 0x08)	/* .G	ULONG		Number of loops done			*/
 #define	PTPLAY_SongPosition		(TAG_USER + 0x09)	/* SG ULONG		Current position				*/

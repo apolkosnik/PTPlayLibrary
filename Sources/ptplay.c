@@ -38,7 +38,7 @@ UWORD __dputch[5] = {0xCD4B, 0x4EAE, 0xFDFC, 0xCD4B, 0x4E75};
 
 
  The "Certified 100%" means that the effect works 100% when used in a single use mode. However
- it´s not 100% sure it works in all conditions with combined effects.
+ itï¿½s not 100% sure it works in all conditions with combined effects.
 
 
  \Per Johansson
@@ -381,7 +381,7 @@ pt_mod_s *pt_init(unsigned char *buf, int bufsize, int freq)
 static int getperiod(int note, int finetune, int delta)
 {
 	int i = 0;
-	while (tab_tunes[0][i] != note)
+	while (tab_tunes[0][i] != note && i < 35)
 		i++;
 
 	i += delta;

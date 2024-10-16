@@ -7,9 +7,9 @@
 #include	"LibHeader.h"
 
 #define	COMPILE_VERSION	2
-#define	COMPILE_REVISION	6
-#define	COMPILE_DATE		"(23.3.2007)"
-#define	PROGRAM_VER			"2.6"
+#define	COMPILE_REVISION	7
+#define	COMPILE_DATE		"(12.10.2024)"
+#define	PROGRAM_VER			"2.7"
 
 static const char 					VerString[];
 static const struct MyInitData	InitData;
@@ -77,7 +77,7 @@ static const struct MyInitData InitData	=
 static const char VerString[]	= "\0$VER: ptplay.library " PROGRAM_VER " "COMPILE_DATE;
 static const char LibName[]	= "ptplay.library";
 
-const char Authors[]	= "Ronald Hof, Timm S. Müller, Per Johansson, Ilkka Lehtoranta";
+const char Authors[]	= "Ronald Hof, Timm S. Mï¿½ller, Per Johansson, Ilkka Lehtoranta";
 
 /**********************************************************************
 	Globals
