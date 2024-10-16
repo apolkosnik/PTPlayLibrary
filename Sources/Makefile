@@ -12,10 +12,11 @@ OBJSGCC	=	$(addprefix $(ODIRGCC),$(OBJECTS))
 # VBCC
 ###########################################################
 
-VBCC		=	DH1:Ohjelmointi/VBCC/Bin/vc
-
-SET68K	= +aos68k -cpu=68020 -fpu=68040 -sc
-SETOPT	= -D__VBCC__ -DAMIGA -Iusr:include -k -c -c99 -size -O3 -maxoptpasses=20 -inline-size=20 -unroll-size=20 -schedule
+#VBCC		=	DH1:Ohjelmointi/VBCC/Bin/vc
+VC		=	/opt/amiga-cc/vbcc/bin/vc
+#SET68K	= +aos68k -cpu=68020 -fpu=68040 -sc
+SET68K	= +aos68k -cpu=68020 -fpu=68881 -sc
+SETOPT	= -D__VBCC__ -DAMIGA -Iusr:include -I/opt/amiga-cc/vbcc/targets/m68k-amigaos/include -k -c -c99 -size -O3 -maxoptpasses=20 -inline-size=20 -unroll-size=20 -schedule
 
 ###########################################################
 # GCC
@@ -81,19 +82,19 @@ dump:
 ###########################################################
 
 ptplay.library	: $(OBJS68K)
-	$(VBCC) +aos68k -final $(OBJS68K) -o $@ -nostdlib
+	$(VC) +aos68k -final $(OBJS68K) -o $@ -nostdlib
 
 $(ODIR68K)LibHeader.o	: LibHeader.c LibHeader.h
-	$(VBCC) +aos68k $(SETOPT) LibHeader.c -o $@
+	$(VC) +aos68k $(SETOPT) LibHeader.c -o $@
 
 $(ODIR68K)LibInit.o		: LibInit.c LibHeader.h
-	$(VBCC) $(SET68K) $(SETOPT) LibInit.c -o $@
+	$(VC) $(SET68K) $(SETOPT) LibInit.c -o $@
 
 $(ODIR68K)ptinit.o		: ptinit.c ptplay_priv.h
-	$(VBCC) $(SET68K) $(SETOPT) -DAMIGA ptinit.c -o $@
+	$(VC) $(SET68K) $(SETOPT) -DAMIGA ptinit.c -o $@
 
 $(ODIR68K)ptplay.o		: ptplay.c ptplay_priv.h
-	$(VBCC) $(SET68K) $(SETOPT) -DAMIGA ptplay.c -o $@
+	$(VC) $(SET68K) $(SETOPT) -DAMIGA ptplay.c -o $@
 
 $(ODIR68K)ptplaytest.o		: ptplaytest.c ptplay_priv.h
-	$(VBCC) $(SET68K) $(SETOPT) -DAMIGA ptplaytest.c -o $@
+	$(VC) $(SET68K) $(SETOPT) -DAMIGA ptplaytest.c -o $@
