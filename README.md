@@ -1,8 +1,8 @@
 # PTPlayLibrary
 Play ("decode") protracker modules
 
-The reason for this repo's existance is that IMP3 (https://aminet.net/package/mus/play/imp3) can be made to use AHI to play modules.
-The problem was that the ptplay.library as found on the Aminet would often crash when used in conjunction with PTReplayLibrary.
+The reason for this repo's existance is that IMP3 (https://aminet.net/package/mus/play/imp3) can be made to use of tthe retargetable audio (AHI) to play modules.
+The problem was that the ptplay.library as found on the Aminet would often crash when used in conjunction with PTReplayLibrary_AHI (the wrapper around PTPlayLibrary, not the PTReplayLibrary 6.6 or 7.0 which use Paula audio).
 I've noticed that there was a slightly updated version for OS4, but there was no backport for OS3, so...
 
 It was taken from https://aminet.net/package/mus/play/PTPlayLibrary.lha, diffed against https://aminet.net/util/libs/ptplaylib_os4.lha
