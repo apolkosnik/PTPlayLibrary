@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+Sources/ptplaytest.asm
+Sources/ptplay.library
+Sources/ptplay.asm
+Sources/ptinit.asm
+Sources/LibInit.asm
+Sources/LibHeader.asm
