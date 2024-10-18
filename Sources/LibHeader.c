@@ -8,7 +8,7 @@
 
 #define	COMPILE_VERSION	2
 #define	COMPILE_REVISION	7
-#define	COMPILE_DATE		"(12.10.2024)"
+#define	COMPILE_DATE		"(17.10.2024)"
 #define	PROGRAM_VER			"2.7"
 
 static const char 					VerString[];
@@ -65,7 +65,7 @@ static const ULONG InitTable[] =
 static const struct MyInitData InitData	=
 {
 	0xa0,8,		NT_LIBRARY,0,
-	0xa0,9,		-5,0,
+	0xa0,9,		5,0,
 	0x80,10,		(ULONG)&LibName[0],
 	0xa0,14,		LIBF_SUMUSED|LIBF_CHANGED,0,
 	0x90,20,		COMPILE_VERSION,

@@ -14,8 +14,8 @@ OBJSGCC	=	$(addprefix $(ODIRGCC),$(OBJECTS))
 
 #VBCC		=	DH1:Ohjelmointi/VBCC/Bin/vc
 VC		=	/opt/amiga-cc/vbcc/bin/vc
+SET68K	= +aos68k -cpu=68020 -fpu=68060 -sc
 #SET68K	= +aos68k -cpu=68020 -fpu=68040 -sc
-SET68K	= +aos68k -cpu=68020 -fpu=68881 -sc
 SETOPT	= -D__VBCC__ -DAMIGA -Iusr:include -I/opt/amiga-cc/vbcc/targets/m68k-amigaos/include -k -c -c99 -size -O3 -maxoptpasses=20 -inline-size=20 -unroll-size=20 -schedule
 
 ###########################################################
@@ -47,9 +47,14 @@ G_LFLAGS	=
 CODETYPE	=	PPC
 TARGET	=	PPC
 
-mos	: ptplay.library.elf
 68k	: ptplay.library
-all	: ptplay.library.elf ptplay.library
+mos	: ptplay.library.elf
+all	: ptplay.library 
+
+clean:
+	rm *.asm 
+	rm Objects68k/*.o 
+	rm ptplay.library
 
 ###########################################################
 # GCC MorphOS 

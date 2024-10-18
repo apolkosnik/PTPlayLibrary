@@ -69,7 +69,7 @@ struct PtPlayLibrary
  ********************************************************************/
 
 ULONG					LibReserved(void);
-struct Library	*	LibInit(struct PtPlayLibrary *LibBase, BPTR LibSegList, struct ExecBase *MySysBase);
+struct Library	*LibInit(REG(d0, struct PtPlayLibrary *LibBase), REG(a0, BPTR LibSegList), REG(a6, struct ExecBase *MySysBase));
 BPTR					NATDECLFUNC_1(LibExpunge, a6, struct PtPlayLibrary *, LibBase);
 BPTR					NATDECLFUNC_1(LibClose, a6, struct PtPlayLibrary *, LibBase);
 struct Library	*	NATDECLFUNC_1(LibOpen, a6, struct PtPlayLibrary *, LibBase);

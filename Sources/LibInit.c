@@ -19,9 +19,9 @@ ULONG LibReserved(void)
  * @LibInit																				*
  ********************************************************************/
 
-struct Library	*LibInit(REG(d0, struct PtPlayLibrary *LibBase), REG(a0, BPTR SegList), REG(a6, struct ExecBase *MySysBase))
+struct Library	*LibInit(REG(d0, struct PtPlayLibrary *LibBase), REG(a0, BPTR LibSegList), REG(a6, struct ExecBase *MySysBase))
 {
-	LibBase->SegList	= SegList;
+	LibBase->SegList	= LibSegList;
 	SysBase				= MySysBase;
 
 	if ((UtilityBase	= (APTR)OpenLibrary("utility.library"	, 36)) == NULL)

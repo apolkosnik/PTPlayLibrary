@@ -583,7 +583,7 @@ noper:
 
 			if(j != 0)
 			{
-				j=tab_funk[j];
+				j=tab_funk[(j & 15)];
 				c->funkoffset+=j;
 
 				if( !(c->funkoffset & 7))
