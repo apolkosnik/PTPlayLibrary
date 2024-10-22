@@ -741,7 +741,7 @@ noper:
 
 				/* Bxx - Position jump						Certified 100% */
 				case 11:
-					if (spos >= j)
+					if ( j >= mod->length) /*  This was checking for spos >= J */
 					{
 						mod->flags |= MODF_SONGEND;
 

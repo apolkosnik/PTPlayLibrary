@@ -8,7 +8,7 @@
 
 #define	COMPILE_VERSION	2
 #define	COMPILE_REVISION	7
-#define	COMPILE_DATE		"(17.10.2024)"
+#define	COMPILE_DATE		"(22.10.2024)"
 #define	PROGRAM_VER			"2.7"
 
 static const char 					VerString[];
