@@ -31,10 +31,6 @@ UWORD __dputch[5] = {0xCD4B, 0x4EAE, 0xFDFC, 0xCD4B, 0x4E75};
 **		boolean and indicates whether initialization succeeded.
 */
 
-//int main (){
-//	return 0;
-//}
-
 ULONG NATDECLFUNC_3(PtTest, a0, STRPTR, filename, a1, UBYTE *, buf, d0, LONG, bufsize)
 {
 	DECLARG_4(a0, STRPTR, filename, a1, UBYTE *, buf, d0, LONG, bufsize, a6, struct PtPlayLibrary *, LibBase)

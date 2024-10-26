@@ -38,7 +38,7 @@ UWORD __dputch[5] = {0xCD4B, 0x4EAE, 0xFDFC, 0xCD4B, 0x4E75};
 
 
  The "Certified 100%" means that the effect works 100% when used in a single use mode. However
- it�s not 100% sure it works in all conditions with combined effects.
+ it's not 100% sure it works in all conditions with combined effects.
 
 
  \Per Johansson
@@ -60,7 +60,7 @@ UWORD __dputch[5] = {0xCD4B, 0x4EAE, 0xFDFC, 0xCD4B, 0x4E75};
 
 /*****************************************************************************/
 
-#include	"LibHeader.h"
+#include "LibHeader.h"
 #include "ptplay_priv.h"
 #include <string.h>
 #include <math.h>

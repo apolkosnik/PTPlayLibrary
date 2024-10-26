@@ -8,13 +8,21 @@ I've noticed that there was a slightly updated version for OS4, but there was no
 It was taken from https://aminet.net/package/mus/play/PTPlayLibrary.lha, diffed against https://aminet.net/util/libs/ptplaylib_os4.lha
 and updated with some changes. The Makefile was adjusted to play nice with environmental variables and all that is in the git history.
 
-I've built it on x86_64 with https://github.com/nicolasbauw/amiga-cc by clonning it to /opt and following the directions.
+I've built it on Linux x86_64 with https://github.com/nicolasbauw/amiga-cc by clonning it to /opt and following the directions.
 
 
-
+Changes in 2.7:
+---------------
+- no FPU needed
+- fixed Fixed Bxx - position jump. It was apparent on mod.professionaltracker at pos 19 / pat 24 - value B13 was causing song end
+- index clipping added to the iterator in getperiod() in play.c L:384
+- index clipping added to the iterator in pt_donote() in play.c L:586
+- include/libraries/ptplay.h was missing PTPLAY_Positions, added
+- bumped library priority from -5 to 0
 
 
 The original PTPlayLibrary.readme, as can be found on the Aminet.net:
+---------------------------------------------------------------------
 
 Short:        Play ("decode") protracker modules
 Author:       Ronald Hof, Timm S. Mueller, Per Johansson, Ilkka Lehtoranta (ilkleht@isoveli.org)
@@ -24,6 +32,7 @@ Version:      2.6
 Architecture: m68k-amigaos; ppc-morphos
 
 Changes in 2.6:
+---------------
  - fixed division by zero exception on 680x0 CPUs (reported by Thilo K�hler)
 
 

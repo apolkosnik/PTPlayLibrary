@@ -15,7 +15,6 @@ OBJSGCC	=	$(addprefix $(ODIRGCC),$(OBJECTS))
 #VBCC		=	DH1:Ohjelmointi/VBCC/Bin/vc
 VC		=	/opt/amiga-cc/vbcc/bin/vc
 SET68K	= +aos68k -cpu=68020 -sc -sd
-#SET68K	= +aos68k -cpu=68020 -fpu=68040 -sc
 SETOPT	= -D__VBCC__ -DAMIGA -Iusr:include -I/opt/amiga-cc/vbcc/targets/m68k-amigaos/include -k -c -c99 -size -O3 -maxoptpasses=40 -inline-size=40 -unroll-size=40 -schedule
 
 ###########################################################

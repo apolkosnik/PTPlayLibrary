@@ -65,7 +65,7 @@ static const ULONG InitTable[] =
 static const struct MyInitData InitData	=
 {
 	0xa0,8,		NT_LIBRARY,0,
-	0xa0,9,		5,0,
+	0xa0,9,		0,0,
 	0x80,10,		(ULONG)&LibName[0],
 	0xa0,14,		LIBF_SUMUSED|LIBF_CHANGED,0,
 	0x90,20,		COMPILE_VERSION,
@@ -77,7 +77,7 @@ static const struct MyInitData InitData	=
 static const char VerString[]	= "\0$VER: ptplay.library " PROGRAM_VER " "COMPILE_DATE;
 static const char LibName[]	= "ptplay.library";
 
-const char Authors[]	= "Ronald Hof, Timm S. M�ller, Per Johansson, Ilkka Lehtoranta";
+const char Authors[]	= "Ronald Hof, Timm S. Müller, Per Johansson, Ilkka Lehtoranta";
 
 /**********************************************************************
 	Globals
