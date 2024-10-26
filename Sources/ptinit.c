@@ -1,11 +1,11 @@
-#include <math.h>
-
 #include	<proto/exec.h>
 #include	<proto/utility.h>
 
 #include	"declgate.h"
 #include	"LibHeader.h"
 #include "ptplay_priv.h"
+
+#include <math.h>
 
 #define	SysBase		LibBase->MySysBase
 #define	UtilityBase	LibBase->MyUtilBase
@@ -30,6 +30,10 @@ UWORD __dputch[5] = {0xCD4B, 0x4EAE, 0xFDFC, 0xCD4B, 0x4E75};
 **		of the required mod data structure. Otherwise, the return value is
 **		boolean and indicates whether initialization succeeded.
 */
+
+//int main (){
+//	return 0;
+//}
 
 ULONG NATDECLFUNC_3(PtTest, a0, STRPTR, filename, a1, UBYTE *, buf, d0, LONG, bufsize)
 {

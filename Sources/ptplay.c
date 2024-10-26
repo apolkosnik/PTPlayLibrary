@@ -66,6 +66,7 @@ UWORD __dputch[5] = {0xCD4B, 0x4EAE, 0xFDFC, 0xCD4B, 0x4E75};
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 #define DO_LOWPASS						/* emulate $E0 */
 #define DO_SONGEND						/* handle song end */

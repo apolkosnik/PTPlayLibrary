@@ -14,7 +14,7 @@ OBJSGCC	=	$(addprefix $(ODIRGCC),$(OBJECTS))
 
 #VBCC		=	DH1:Ohjelmointi/VBCC/Bin/vc
 VC		=	/opt/amiga-cc/vbcc/bin/vc
-SET68K	= +aos68k -cpu=68020 -fpu=68060
+SET68K	= +aos68k -cpu=68020 -sc -sd
 #SET68K	= +aos68k -cpu=68020 -fpu=68040 -sc
 SETOPT	= -D__VBCC__ -DAMIGA -Iusr:include -I/opt/amiga-cc/vbcc/targets/m68k-amigaos/include -k -c -c99 -size -O3 -maxoptpasses=40 -inline-size=40 -unroll-size=40 -schedule
 
@@ -87,7 +87,7 @@ dump:
 ###########################################################
 
 ptplay.library	: $(OBJS68K)
-	$(VC) +aos68k -final $(OBJS68K) -o $@ -nostdlib
+	$(VC) +aos68k -sc -sd -final $(OBJS68K) -o $@ -nostdlib -lmsoft -lvcs
 
 $(ODIR68K)LibHeader.o	: LibHeader.c LibHeader.h
 	$(VC) +aos68k $(SETOPT) LibHeader.c -o $@
